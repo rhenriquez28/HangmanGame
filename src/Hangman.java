@@ -3,22 +3,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Random;
 
-public class Hangman implements Runnable{
-
-    Thread t;
-
-    Hangman(){
-        t = new Thread();
-        t.start();
-    }
+public class Hangman{
 
     public static void main(String[] args) {
-        new Hangman();
-
-    }
-
-    @Override
-    public void run() {
         int amountOfGuessesLeft = 8;
         boolean wordComplete = false;
         Random randGenerator = new Random();
